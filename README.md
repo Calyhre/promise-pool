@@ -3,6 +3,14 @@
 
 A PromisePool is a queue of promise running concurrently, limited by a defined concurrency. NodeJS is a Single Thread Event loop, which means that truly parallel execution does not exists by default. So the purpose of this library is not to save CPU or times, but rather limit the number of running promises in memory.
 
+So main goals of this library:
+- [x] Have a pool of promises that limits the number of them running in parallel
+- [x] It is possible to add promises to it *while* the pool is running
+- [x] Concurrency can be updated while the pool is running
+- [x] The number of running promises should be as full as permitted by the set `concurrency`
+- [x] The pool can be started at any given point
+- [ ] The pool can be stopped at any given point
+
 
 ## Why may I need this?
 
